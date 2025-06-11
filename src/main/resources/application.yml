@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: MealMate
+  datasource:
+    username: root
+    password: admin
+    url: jdbc:mysql://localhost:3306/MegaDeals_DB
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+server:
+  port: 8765
+
