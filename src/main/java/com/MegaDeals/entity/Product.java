@@ -3,7 +3,9 @@ package com.MegaDeals.entity;
 import jakarta.persistence.*;
 import lombok.*;
 
-    @Setter
+import java.util.List;
+
+@Setter
     @Getter
     @NoArgsConstructor
     @AllArgsConstructor
@@ -17,6 +19,9 @@ import lombok.*;
         private String title;
         private String description;
         private Double price;
+
+        @OneToMany(mappedBy = "product")
+        private List<ProductCategory> productCategories;
 
     }
 
