@@ -3,6 +3,8 @@ package com.MegaDeals.entity;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.util.List;
+
 @Setter
 @Getter
 @NoArgsConstructor
@@ -15,7 +17,8 @@ public class Category extends BaseEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
-
+    @OneToMany(mappedBy = "category")
+    private List<ProductCategory> productCategories;
 }
 
 
